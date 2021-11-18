@@ -26,7 +26,7 @@ OtherRepo=() ##示例：OtherRepo=(1 3)
 dependencies="yes" ##yes为安装，no为不安装
 package_name="canvas png-js date-fns axios crypto-js ts-md5 tslib @types/node dotenv typescript fs require tslib"
 ## 3. Ninja 是否需要启动和更新设置
-Ninja="on" ##up为更新，on为启动，down为不运行
+Ninja="down" ##up为更新，on为启动，down为不运行
 
 
 #------ 编号区 ------#
@@ -40,7 +40,7 @@ Ninja="on" ##up为更新，on为启动，down为不运行
 二、其他仓库（Other Repositories）
 1-passerby-b
 2-curtinlv
-3-smiek2221
+3-smiek2121
 4-cdle
 5-ZCY01
 6-whyour/hundun
@@ -83,7 +83,7 @@ OR2(){
     ql repo https://github.com/curtinlv/JD-Script.git "jd_"
 }
 OR3(){
-    ql repo https://github.com/smiek2221/scripts.git "jd_|gua_" "" "^MovementFaker|^JDJRValidator|^ZooFaker|^sign"
+    ql repo https://github.com/smiek2121/scripts.git "jd_|gua_" "" "ZooFaker_Necklace.js|JDJRValidator_Pure.js|sign_graphics_validate.js|cleancart_activity.js|jdCookie.js|sendNotify.js"
 }
 OR4(){
     ql repo https://github.com/cdle/xdd.git "jd_" "disposable|expired|jdc"
