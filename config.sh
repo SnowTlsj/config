@@ -320,15 +320,15 @@ export JD_USER_AGENT=""
 ### 控制每次获取商品数量，默认12
 export JD_TRY_PAGE_SIZE=""
 ### 商品分类，以 @ 隔开，示例：家用电器@手机数码@电脑办公@家居家装
-export JD_TRY_CIDS_KEYS=""
+export JD_TRY_CIDS_KEYS="家用电器@手机数码@电脑办公@家居家装"
 ### 试用类型，以 @ 隔开，示例：免费试用@闪电试
 export JD_TRY_TYPE_KEYS=""
 ### 过滤试用商品关键字，以 @ 隔开(默认内置了很多关键字，建议使用默认)
 export JD_TRY_GOOD_FILTERS=""
 ### 试用商品最低价格
-export JD_TRY_MIN_PRICE=""
+export JD_TRY_MIN_PRICE="20"
 ### 试用商品最多提供数量（过滤垃圾商品）
-export JD_TRY_MAX_SUPPLY_COUNT=""
+export JD_TRY_MAX_SUPPLY_COUNT="3"
 
 # 龙猪猪环境变量
 ## 京豆雨通知，填写true为不关闭推送，false为关闭推送
@@ -629,8 +629,20 @@ export JD_OPENCARD_EAT_OPEN_OPENCARD=""
 ### 填写11就是跑到11个ck就停止，填写21就是跑到21个ck就停止，一天最多助力20个ck，推荐10的倍数 +1 填写！！
 export JD_OPENCARD_COOL_SUMMER2=""
 
+##以下为小呱呱手动添加
 ##开卡全部同意（all变量）
 export guaopencard_All="true"
 export guaopencard_addSku_All="true"
 export guaopencardRun_All="true"
 export guaopencard_draw="true"
+
+##清空购物车
+export gua_cleancart_Run="true"
+export gua_cleancart_products="*@&@所有账号清空"
+export gua_cleancart_SignUrl="https://jd.smiek.tk/jdcleancatr_21102717"
+
+##发财挖宝
+export fcwbroud=1
+
+##京东试用
+export JD_TRY="true"
