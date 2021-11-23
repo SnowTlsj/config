@@ -21,7 +21,7 @@ echo 复制完毕
 ql extra
 拉取仓库修复依赖
 
-#第三
+#第三 注意去code文件调节互助模式，绿色文字注释好好看
 新建定时任务“格式化更新助力码”
 task /ql/config/code.sh（code.sh存放在config目录下）
 或者
