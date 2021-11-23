@@ -1,6 +1,6 @@
 #必须按照小呱呱容器映射目录
 https://blog.csdn.net/z_162423/article/details/121212649
-或者ql目录下新建一个deps文件夹，将魔改版jdCookie.js拖入其中
+或者ql目录下新建一个deps文件夹，将魔改版jdCookie.js拖入config和deps
 
 
 #2.10.8版本及以下自行在before文件末尾新添以下十行
