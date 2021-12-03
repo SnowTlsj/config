@@ -629,7 +629,8 @@ export JD_OPENCARD_EAT_OPEN_OPENCARD=""
 ### 填写11就是跑到11个ck就停止，填写21就是跑到21个ck就停止，一天最多助力20个ck，推荐10的倍数 +1 填写！！
 export JD_OPENCARD_COOL_SUMMER2=""
 
-##以下为小呱呱手动添加
+
+##以下为小呱呱手动添加，以下为小呱呱手动添加，以下为小呱呱手动添加
 ##开卡全部同意（all变量）
 export guaopencard_All="true"
 export guaopencard_addSku_All="true"
@@ -646,3 +647,6 @@ export fcwbroud=1
 
 ##京东试用
 export JD_TRY="true"
+
+##爱企查
+export aqcCookies="cookie"
