@@ -458,17 +458,6 @@ export Read10UA=""
 ### 填true推送消息，默认不推送
 export jrpush=""
 
-# smiek2221 环境变量
-## 1、燃动夏季—入会
-export summer_movement_joinjoinjoinhui="false" ##是否入会 true 入会，false 不入会
-## 2、燃动夏季—百元守卫战SH
-export summer_movement_ShHelpFlag="1" ##0 不开启也不助力 1 开启并助力 2 开启但不助力 默认开启并助力
-## 3、燃动夏季-新增只做邀请助力功能
-export summer_movement_HelpHelpHelpFlag="true" ##是否只执行邀请助力 true 是 false 不是 默认 false
-### 可以设置13点执行一下脚本
-if [ $(date "+%H") -eq 13 ]; then
-    export summer_movement_HelpHelpHelpFlag="true"
-fi
 ## 4、京东签到图形验证修改火爆问题
 ### 如果 read ECONNRESET 错误 可以试试
 ### 环境变量 JOY_HOST 修改域名 https://jdjoy.jd.com 可以改成ip https://49.7.27.236
@@ -490,31 +479,6 @@ export DDQ_NOTIFY_CONTROL="" ##不填或false为通知，true为不通知
 ## 9、组队瓜分京豆活动变量
 export jd_zdjr_activityId=""
 export jd_zdjr_activityUrl=""
-## 10、奥运夺金牌开卡
-export guaolympicopencard="true"
-## 11、7.31-8.10 全民奥运 激情奔跑
-export guaolympicopencard2="true"
-## 12、8.4-8.12 大牌联合 冰爽一夏
-export guaopencard4="true" ##开卡
-export guaopencard_addSku4="true" ##加购物车
-## 13、8.5-8.12 冰爽夏日 钜惠送好礼
-export guaopencard5="true" ##开卡
-export guaopencard_addSku5="true" ##加购物车
-## 14、七夕告白季
-export guaopencard6="true" ##开卡
-export guaopencard_addSku6="true" ##加购物车
-## 15、8.8-8.14 七夕会员福利社
-export guaopencard7="true" ##开卡
-export guaopencard_addSku7="true" ##加购物车
-## 16、8.10-8.15 头号玩家 一起热8
-export guaopencard8="true" ##开卡
-export guaopencard_addSku8="true" ##加购物车
-## 17、8.11-8.15 星动七夕 纵享丝滑
-export guaopencard9="true" ##开卡
-export guaopencard_addSku9="true" ##加购物车
-## 18、8.11-8.18 大牌联合 约惠一夏
-export guaopencard10="true" ##开卡
-export guaopencard_addSku10="true" ##加购物车
 ## 17开卡任务
 export guaopencardRun17="true" ##开卡任务
 ## 19-38、预备
@@ -563,15 +527,6 @@ export enableAngryBeanNotify="true"
 ### 助力规则：开团账号开团，其他账号自动参团。 例：有A,B,C账号，A，B账号开团，则B，C会参加A的团，A会参加B的团。账号内互助之后，开团账号若有剩下参团次数，会尝试加入作者团
 ### 成团条件：成团所需人数根据活动所需人数变化，一般为5-7人，若5人成团，则5个CK能成团一次，9个CK能成团两次，13个CK能成团三次
 export OPEN_DREAMFACTORY_TUAN=""
-## 2、燃动夏季
-### 会助力作者百元守卫战 参数helpAuthorFlag 默认助力
-### 百元守卫战,先脚本内互助，多的助力会助力作者
-export helpAuthorFlag="true" ##是否助力作者SH true 助力，false 不助力
-## 3、燃动夏季下注
-### 每个奖品会花费200币下注，不想下注的人不要跑
-### 若想下满注则设置环境变量 MAX_BET=true 前提：需要账号已经开通店铺会员
-### 每日20点开奖，脚本会自动开奖
-export MAX_BET="true"
 
 # JDHelloWorld 环境变量
 ## 1、宠汪汪二代目
@@ -584,9 +539,9 @@ export JD_JOY_teamLevel="2"
 export CFD_CASHOUT_MONEY=10
 ### token，顺序、数量必须与cookie一致。抓包地址：https://m.jingxi.com/jxbfd/user/ExchangePrize
 ### export CFD_CASH_TOKEN='[{"strPgtimestamp":"你的值","strPhoneID":"你的值","strPgUUNum":"你的值"},{"strPgtimestamp":"你的值","strPhoneID":"你的值","strPgUUNum":"你的值"}]'
-export CFD_CASH_TOKEN='[{"strPgtimestamp":"1626623544085","strPhoneID":"878e21db65d2d606","strPgUUNum":"56eaaf98f7d7a69c59e50c6bb40e79c1"}]'
+export CFD_CASH_TOKEN='[{"strPgtimestamp":"","strPhoneID":"","strPgUUNum":""}]'
 ## 3、宠汪汪等提示预存验证码数量不足
-export validate_num="" ##你需要的数值
+export validate_num="10" ##你需要的数值
 
 # Aaron-lv 环境变量
 ## 1、京东健康社区京豆兑换
@@ -601,34 +556,6 @@ export NOTIFY_SKIP_LIST=""
 ## 1、清空购物车
 ### 将需要跳过清理的账号(cookie中的pt_pin)放到变量CleanUsers中，多个用@隔开
 export CleanUsers=""
-
-# Tsukasa007 环境变量
-## 1、7.28-8.6 定格夺冠
-### 第一个账号助力Tsukasa007，其他依次助力CK1第一个CK失效应该全都会助力Tsukasa007，亲注意一下（其他脚本逻辑都差不多）
-### 一天只能领400豆1个ck20豆，不设置变量默认只会运行到ck21，填写11就是跑到11个ck就停止，填写21就是跑到21个ck就停止，如果没豆那就改变量，ck多每天改一次收益最大化
-export JD_OPENCARE_CHAMPIONSHIP=""
-## 2、7.28-8.9 夏日呵护 母音甄选	
-### 一天只能领100豆1个ck10豆，不设置变量默认只会运行到ck11，填写11就是跑到11个ck就停止，填写22就是跑到22个ck就停止，一天最多助力10个ck，推荐11的倍数填写！！如果11没豆那就22如此类推，每天改一次收益最大化
-export JD_SUMMER_MOM_OPENCARD=""
-## 3、7.29-8.9 奥运夺金挑战赛
-### 一天只能领200豆1个ck20豆，不设置变量默认只会运行到ck11，填写11就是跑到11个ck就停止，填写22就是跑到22个ck就停止，一天最多助力10个ck，推荐11的倍数填写！！每天改一次收益最大化
-export JD_OLYMPIC_WIN_GOLD=""
-## 4、7.26-8.8 全民奔跑 激扬奥运
-### env OLYMPIC_START_DRAW = true 就是开启ck1抽奖 (!!!抽奖时间可能很长，慢慢抽吧!!!)
-export OLYMPIC_START_DRAW="true"
-## 5、8.2-8.12 奶爸盛典 爸气全开
-### 填写11就是跑到11个ck就停止，填写21就是跑到21个ck就停止，一天最多助力20个ck 推荐10的倍数 +1 填写！！
-export JD_OPENCARD_DADDY=""
-## 6、8.4-8.12 大牌联合 冰爽一夏
-### 这个活动经过Tsukasa007的测试，邀请了38个ck，有18次20豆，所以有点随机不好判断一天有多少豆，默认21停，觉得自己牛逼，就改成 999 跑完算了！！
-export JD_OPENCARD_COOL_SUMMER="999"
-## 7、7.24-8.15 嗨皮一下 食力全开
-### 填写11就是跑到11个ck就停止，填写22就是跑到22个ck就停止，一天最多助力10个ck，推荐11的倍数填写！！如果11没豆那就22如此类推，每天改一次收益最大化
-export JD_OPENCARD_EAT_OPEN_OPENCARD=""
-## 8、8.5-8.12 大牌联合 冰爽一夏 钜惠送好礼
-### 填写11就是跑到11个ck就停止，填写21就是跑到21个ck就停止，一天最多助力20个ck，推荐10的倍数 +1 填写！！
-export JD_OPENCARD_COOL_SUMMER2=""
-
 
 ##以下为小呱呱手动添加，以下为小呱呱手动添加，以下为小呱呱手动添加
 ##开卡全部同意（all变量）
@@ -650,3 +577,5 @@ export JD_TRY="true"
 
 ##爱企查
 export aqcCookies="cookie"
+
+##愤怒的锦鲤见504行
