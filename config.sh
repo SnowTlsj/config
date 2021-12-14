@@ -576,6 +576,24 @@ export fcwbroud=1
 export JD_TRY="true"
 
 ##爱企查
-export aqcCookies="cookie"
+export aqcCookies="cookie"@"cookie2"
+##爱妻查监控e卡
+export aqcGood="AQ03008"
 
 ##愤怒的锦鲤见504行
+
+##今日头条小黄鸟搜索hostname = i.snssdk.com //安卓版  hostname = api3-normal-lq.toutiaoapi.com //IOS版
+export jrttjsbHeader="cookie"@"cookie2"
+##今日头条极速
+export jrttjsbHeader="cookie"@"cookie2"
+
+##快手极速版小黄鸟搜ug-fission.kuaishou.com
+export kshd="cookie"@"cookie2"
+
+##聚看点
+###聚看点
+export jkdhd='{"openid": "cookie"}'@'{"openid": "cookie2"}'
+export jkdck='{"Cookie":"xz_jkd_appkey=cookie"}'@'{"Cookie":"xz_jkd_appkey=cookie2"}'
+
+
+
