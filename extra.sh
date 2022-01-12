@@ -13,9 +13,6 @@
 ## 2. 安装依赖
 ### （1）默认不安装，因为 Build 20210728-002 及以上版本的 code.sh 自动检查修复依赖
 ### （2）若需要在此处使用，请在设置区设置
-## 3. Ninja
-### （1）默认启动并自动更新
-### （2）⚠未修改容器映射的请勿运行，否则会出现青龙打不开或者设备死机等不良后果，映射参考 https://github.com/MoonBegonia/ninja#%E5%AE%B9%E5%99%A8%E5%86%85
 
 
 #------ 设置区 ------#
@@ -24,9 +21,7 @@ CollectedRepo=(4) ##示例：CollectedRepo=(2 4 6)
 OtherRepo=(3) ##示例：OtherRepo=(1 3)
 ## 2. 是否安装依赖和安装依赖包的名称设置
 dependencies="yes" ##yes为安装，no为不安装
-package_name="canvas png-js date-fns axios crypto-js ts-md5 tslib @types/node dotenv typescript fs require tslib"
-## 3. Ninja 是否需要启动和更新设置
-Ninja="down" ##up为更新，on为启动，down为不运行
+package_name="canvas png-js jsdom date-fns axios crypto-js ts-md5 tslib @types/node dotenv typescript fs require tslib"
 
 
 #------ 编号区 ------#
@@ -34,7 +29,8 @@ Ninja="down" ##up为更新，on为启动，down为不运行
 一、集成仓库（Collected Repositories)
 2-JDHelloWorld
 3-he1pu
-4-shufflewzc
+4-shufflewzc ##faker2
+5-shufflewzc ##faker3
 6-Aaron-lv
 7-yuannian1112
 二、其他仓库（Other Repositories）
@@ -63,7 +59,10 @@ CR3(){
     ql repo https://github.com/he1pu/JDHelp.git "jd_|jx_|getJDCookie" "Coupon|update" "^jd[^_]|USER|^sign|^ZooFaker|utils"
 }
 CR4(){
-    ql repo https://github.com/shufflewzc/faker2.git "jd_|jx_|jddj_|getJDCookie" "activity|backUp|Coupon|update" "^jd[^_]|USER|utils|^JS|^TS|^JDJRValidator_Pure|^ZooFaker|^sign|ql"
+    ql repo https://ghproxy.com/https://github.com/shufflewzc/faker2.git "jd_|jx_|gua_|jddj_|getJDCookie" "activity|backUp" "^jd[^_]|USER|function|utils|sendNotify|ZooFaker_Necklace.js|JDJRValidator_|sign_graphics_validate|ql"
+}
+CR5(){
+    ql repo https://ghproxy.com/https://github.com/shufflewzc/faker3.git "jd_|jx_|gua_|jddj_|getJDCookie" "activity|backUp" "^jd[^_]|USER|function|utils|sendNotify|ZooFaker_Necklace.js|JDJRValidator_|sign_graphics_validate|ql"
 }
 CR6(){
     ql repo https://github.com/Aaron-lv/sync.git "jd_|jx_|getJDCookie" "activity|backUp|Coupon" "^jd[^_]|USER|utils" "jd_scripts"
@@ -122,47 +121,6 @@ for i in ${OtherRepo[@]}; do
     OR$i
     sleep 5
 done
-
-
-# 🍪Ninja
-update_Ninja_normal(){
-    cd /ql/ninja/backend && git checkout . && git pull
-    pnpm install && pm2 start
-    cp sendNotify.js /ql/scripts/sendNotify.js
-}
-
-check_Ninja_normal(){
-    NOWTIME=$(date +%Y-%m-%d-%H-%M-%S)
-    i=0
-    while ((i<=0)); do
-        echo "扫描 Ninja 是否在线"
-        ps -fe|grep ninja|grep -v grep
-        if [ $? -ne 0 ]; then
-            i=0
-            echo $NOWTIME" 扫描结束！Ninja 掉线了不用担心马上重启！"
-            cd /ql
-            ps -ef|grep ninja|grep -v grep|awk '{print $1}'|xargs kill -9
-            cd /ql/ninja/backend
-            pnpm install
-            pm2 start
-            ps -fe|grep Daemon |grep -v grep 
-            if [ $? -ne 1 ]; then
-                i=1
-                echo $NOWTIME" Ninja 重启完成！"
-                curl "https://api.telegram.org/bot$TG_BOT_TOKEN/sendMessage?chat_id=$TG_USER_ID&text=Ninja 已重启完成"
-            fi
-        else
-            i=1
-            echo $NOWTIME" 扫描结束！Ninja 还在！"
-        fi
-    done
-}
-
-if [ "$Ninja" = "up" ]; then
-    update_Ninja_normal &
-elif [ "$Ninja" = "on" ]; then
-    check_Ninja_normal
-fi
 
 
 # 📦依赖
