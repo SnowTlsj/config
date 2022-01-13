@@ -9,8 +9,6 @@ export aqcCookies="cookie"@"cookie2"
 export aqcGood="AQ03008"
 ## 2、今日头条小黄鸟搜索hostname = i.snssdk.com //安卓版  hostname = api3-normal-lq.toutiaoapi.com //IOS版
 export jrttjsbHeader="cookie"@"cookie2"
-##    今日头条极速
-export jrttjsbHeader="cookie"@"cookie2"
 ## 3、快手极速版小黄鸟搜ug-fission.kuaishou.com
 export kshd="cookie"@"cookie2"
 ## 4、聚看点
@@ -20,7 +18,7 @@ export jkdck='{"Cookie":"xz_jkd_appkey=cookie"}'@'{"Cookie":"xz_jkd_appkey=cooki
 
 
 
-##########################################################################################################################################################################
+
 
 
 ################################################################################################################################################################################
@@ -202,6 +200,8 @@ export guaopencard_draw="true"
 export gua_cleancart_Run="true"
 export gua_cleancart_products="*@&@所有账号清空"
 export gua_cleancart_SignUrl="https://jd.smiek.tk/jdcleancatr_21102717"
+
+
 
 
 ##########################################################################################################################################################################
