@@ -1,3 +1,264 @@
+##########################################################################################################################################################################
+
+羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区 羊毛区
+
+##########################################################################################################################################################################
+## 1、爱企查
+export aqcCookies="cookie"@"cookie2"
+##    爱妻查监控e卡
+export aqcGood="AQ03008"
+## 2、今日头条小黄鸟搜索hostname = i.snssdk.com //安卓版  hostname = api3-normal-lq.toutiaoapi.com //IOS版
+export jrttjsbHeader="cookie"@"cookie2"
+##    今日头条极速
+export jrttjsbHeader="cookie"@"cookie2"
+## 3、快手极速版小黄鸟搜ug-fission.kuaishou.com
+export kshd="cookie"@"cookie2"
+## 4、聚看点
+export jkdhd='{"openid": "cookie"}'@'{"openid": "cookie2"}'
+export jkdck='{"Cookie":"xz_jkd_appkey=cookie"}'@'{"Cookie":"xz_jkd_appkey=cookie2"}'
+
+
+
+
+##########################################################################################################################################################################
+
+
+################################################################################################################################################################################
+
+京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区
+
+################################################################################################################################################################################
+
+
+#########   红包现金区
+
+## 1、愤怒的锦鲤
+##    助力账号，填写pt_pin或用户名的值。多个 pt_pin 值用 @ 连接如export kois="ck1"@"ck2"
+export kois=""
+## 2、早起赢现金
+##    入口：京东汽车-瓜分万元
+##    备注：支付一元才能参与活动，填写环境变量morningScPins给指定账号打卡
+export morningScPins="$(echo $JD_COOKIE | sed "s/&/\n/g; s/\S*pt_pin=\([^;]\+\);\S*/\1/g; s/\n/@/g;")"
+## 3、赚30元
+##    备注：赚30元每日签到红包、天降红包助力，在earn30Pins环境变量中填入需要签到和接受助力的账号。
+##    技巧：每月可以提现100元，但需要邀请一个新人下首单。可以用已注册手机号重新注册为新人账号，切换ip可以提高成功率。
+export earn30Pins=""
+## 4、全民运动会守卫红包
+##    助力码，需手动抓包
+export olympicgames_inviteId=""
+## 2、签到领现金兑换
+##    填写 pt_pin@金额，pt_pin为用户名，可以在 COOKIES 中提取；金额为 2 或 10，例如 LiLei@2 或 HanMeimei@10。多值用 & 连接，例如 LiLei@2&HanMeimei@10
+export exchangeAccounts=""     ##兑2元现金
+
+
+
+#########   京豆兑换区
+
+## 1、京东健康社区京豆兑换
+export JD_HEALTH_REWARD_NAME="20" ##只能兑换京豆，填写纯数字20 10 5 3
+## 2、真·抢京豆
+##    高速并发抢京豆，专治偷助力。设置环境变量angryBeanPins为指定账号助力，默认不助力。
+##    环境变量angryBeanMode可选值priority或speed或smart，默认smart模式。
+##    默认推送通知，如要屏蔽通知需将环境变量enableAngryBeanNotify的值设为false。
+export angryBeanPins=""
+export angryBeanMode="priority"
+export enableAngryBeanNotify="true"
+## 3、组队瓜分京豆活动变量
+export jd_zdjr_activityId=""
+export jd_zdjr_activityUrl=""
+## 4、东东超市商品兑换
+##    填写商品名字，兼容模糊关键词
+export coinToBeans='京豆包'
+##    多账号并发，默认开启 True，关闭 False
+export blueCoin_Cc='True'
+##    轮次
+export startMaxNum="30"
+##    多线程并发，相当于每秒点击兑换次数...适当调整，手机会发烫
+export dd_thread="30"
+##    开始抢兑时间
+export starttime="23:59:59.00000000"
+##    结束时间
+export endtime="00:00:30.00000000"
+## 5、QQ星系牧场自动兑换20豆
+export Cowexchange="true"
+## 6、赚京豆
+##    助力账号，填写pt_pin或用户名的值，如 zlzh = ['aaaa','xxxx','yyyy'] ，支持ENV
+export zlzh=""
+## 7、全民抢京豆
+export qjd_zlzh=""
+## 8、宠汪汪积分兑换多少京豆。目前可填值为20或者500,脚本默认0,0表示不兑换京豆
+export JD_JOY_REWARD_NAME="500"
+## 9、东东超市兑换京豆数量。目前可输入值为20或者1000，或者其他商品的名称,例如碧浪洗衣凝珠
+export MARKET_COIN_TO_BEANS="超值京豆包"
+## 10、京东领现金红包兑换京豆开关。false为不换,true为换(花费2元红包兑换200京豆，一周可换四次)，默认为false
+export CASH_EXCHANGE="false"
+
+
+
+
+
+#########   活动设置区
+
+## 1、京东试用jd_try相关环境变量
+##    京东试用
+export JD_TRY="true"
+##    控制每次获取商品数量，默认12
+export JD_TRY_PAGE_SIZE=""
+##    商品分类，以 @ 隔开，示例：家用电器@手机数码@电脑办公@家居家装
+export JD_TRY_CIDS_KEYS="家用电器@手机数码@电脑办公@家居家装"
+##    试用类型，以 @ 隔开，示例：免费试用@闪电试
+export JD_TRY_TYPE_KEYS=""
+##    过滤试用商品关键字，以 @ 隔开(默认内置了很多关键字，建议使用默认)
+export JD_TRY_GOOD_FILTERS=""
+##    试用商品最低价格
+export JD_TRY_MIN_PRICE="20"
+##    试用商品最多提供数量（过滤垃圾商品）
+export JD_TRY_MAX_SUPPLY_COUNT="3"
+## 2、京豆雨
+##    整点京豆雨RRA
+export SUPER_RAIN_RRA=""
+##    半点京豆雨RRA
+export HALF_RAIN_RRA=""
+## 3、京东领现金红包兑换京豆开关。false为不换,true为换(花费2元红包兑换200京豆，一周可换四次)，默认为false
+export CASH_EXCHANGE="false"
+## 4、宠汪汪喂食数量。可以填的数字0,10,20,40,80,其他数字不可
+export JOY_FEED_COUNT="80"
+## 5、宠汪汪帮好友喂食。默认 "false" 不会自动给好友的汪汪喂食，如想自动喂食，请修改为 "true"
+export JOY_HELP_FEED="true"
+## 6、宠汪汪是否赛跑(默认参加双人赛跑)。false为不跑,true为跑
+export JOY_RUN_FLAG="true"
+## 7、宠汪汪参加什么级别的赛跑。可选数字为2,10,50，
+##    当JOY_RUN_FLAG不设置或设置为 "true" 时生效
+##    可选值：2,10,50，其他值不可以。其中2代表参加双人PK赛，10代表参加10人突围赛，50代表参加50人挑战赛，不填时默认为2
+##    各个账号间请使用 & 分隔，比如：JOY_TEAM_LEVEL="2&2&50&10"
+##    如果您有5个账号但只写了四个数字，那么第5个账号将默认参加2人赛，账号如果更多，与此类似
+export JOY_TEAM_LEVEL="2&2&50&10"
+## 8、宠汪汪赛跑自己账号内部互助。输入true为开启内部互助
+export JOY_RUN_HELP_MYSELF="true"
+## 9、东东超市是否参加pk。true表示参加,false表示不参加
+export JOIN_PK_TEAM="true"
+## 10、东东超市是否用金币抽奖。true表示抽奖,false表示不抽奖
+export SUPERMARKET_LOTTERY="true"
+## 11、东东农场是否使用水滴换豆卡。true表示换,false表示不换
+export FRUIT_BEAN_CARD="true"
+## 12、是否取关商品。环境变量内容的意思依次是是否取关全部商品(0表示一个都不),是否取关全部店铺数(0表示一个都不),遇到此商品不再进行取关,遇到此店铺不再进行取关
+export UN_SUBSCRIBES="300,300,,"
+## 13、jd_unsubscribe这个任务是用来取关每天做任务关注的商品和店铺，默认在每次运行时取关20个商品和20个店铺
+##    如果取关数量不够，可以根据情况增加，还可以设置 jdUnsubscribeStopGoods 和 jdUnsubscribeStopShop 
+##    商品取关数量
+export goodPageSize="30"
+##    店铺取关数量
+export shopPageSize="60"
+##    遇到此商品不再取关此商品以及它后面的商品，需去商品详情页长按拷贝商品信息
+export jdUnsubscribeStopGoods=""
+##    遇到此店铺不再取关此店铺以及它后面的店铺，请从头开始输入店铺名称
+export jdUnsubscribeStopShop=""
+## 14、摇钱树是否卖出金果。true卖出，false不卖出，默认false
+export MONEY_TREE_SELL_FRUIT="true"
+## 15、东东工厂心仪商品。
+export FACTORAY_WANTPRODUCT_NAME=""
+## 16、东东工厂控制哪个京东账号不运行此脚本。多个使用&连接
+export JDFACTORY_FORBID_ACCOUNT=""
+## 17、京喜工厂控制哪个京东账号不运行此脚本。多个使用&连接
+export DREAMFACTORY_FORBID_ACCOUNT=""
+## 18、lxk0301脚本是否加购。如加设置true
+export PURCHASE_SHOPS="true"
+## 19、京喜工厂拼团瓜分电力活动的activeId（当前需抓包替换或去群里求别人分享）
+export TUAN_ACTIVEID=""
+## 20、京东UA。点点券脚本运行环境变量
+export JD_USER_AGENT=""
+## 21、宠汪汪二代目
+##    默认80，10、20、40、80可选
+export feedNum="80"
+##    默认双人跑
+export JD_JOY_teamLevel="2"
+##    宠汪汪等提示预存验证码数量不足
+export validate_num="10" ##你需要的数值
+## 22、京东签到图形验证修改火爆问题
+##    如果 read ECONNRESET 错误 可以试试
+##    环境变量 JOY_HOST 修改域名 https://jdjoy.jd.com 可以改成ip https://49.7.27.236
+##    如果上面ip不行就自己去ping下域名对应的ip cmd窗口输入—>ping jdjoy.jd.com 再改
+##    不要频繁请求 请过个半小时 1小时在执行
+export JOY_HOST=""
+## 23、图形验证文件 JDJRValidator_Pure.js 验证次数
+##    新增验证次数上限 默认25次 验证可能无法成功
+export JDJR_validator_Count="20"
+## 25、邀请有礼  
+##    自定义邀请码环境变量
+export yqm="" ##你的邀请码
+## 26、签到领现金添加变量方式
+##    自行添加变量设置邀请码 格式如下 默认10个
+export cashinviteCode=""
+export cashinviteCode2=""
+export cashinviteCode3=""
+##    签到领现金助力
+export cash_zlzh=""
+## 27、开卡全部同意（all变量）
+export guaopencard_All="true"
+export guaopencard_addSku_All="true"
+export guaopencardRun_All="true"
+export guaopencard_draw="true"
+## 28、清空购物车
+export gua_cleancart_Run="true"
+export gua_cleancart_products="*@&@所有账号清空"
+export gua_cleancart_SignUrl="https://jd.smiek.tk/jdcleancatr_21102717"
+
+
+##########################################################################################################################################################################
+
+京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区 京喜极速区
+
+##########################################################################################################################################################################
+
+## 1、京喜工厂开团
+##    默认第一个CK开团，例：若OPEN_DREAMFACTORY_TUAN="2,3"，则第2，第3个CK开团，其他账号参加第2，第3个CK开的团。每执行一次，会领取上一次成团的奖励和新开一次团，每天执行4次能开完3次团和领取3次团的奖励。一个账号能参团一次，一个账号一天能开三次团，请根据自己的情况设置需要开团的CK，一般至少5个CK能成团
+##    助力规则：开团账号开团，其他账号自动参团。 例：有A,B,C账号，A，B账号开团，则B，C会参加A的团，A会参加B的团。账号内互助之后，开团账号若有剩下参团次数，会尝试加入作者团
+##    成团条件：成团所需人数根据活动所需人数变化，一般为5-7人，若5人成团，则5个CK能成团一次，9个CK能成团两次，13个CK能成团三次
+export OPEN_DREAMFACTORY_TUAN=""
+## 2、新版京喜财富岛提现
+##    提现金额，可选0.1 0.5 1 2 10
+export CFD_CASHOUT_MONEY=10
+##    token，顺序、数量必须与cookie一致。抓包地址：https://m.jingxi.com/jxbfd/user/ExchangePrize
+##    export CFD_CASH_TOKEN='[{"strPgtimestamp":"你的值","strPhoneID":"你的值","strPgUUNum":"你的值"},{"strPgtimestamp":"你的值","strPhoneID":"你的值","strPgUUNum":"你的值"}]'
+export CFD_CASH_TOKEN='[{"strPgtimestamp":"","strPhoneID":"","strPgUUNum":""}]'
+## 3、京喜工厂开团助力 for Python
+##    支持指定账号开团，跑1次脚本默认开3次团，如未指定账号默认给账号一开团。
+##    变量ENV 指定开团账号。可填用户名 或 pt_pin 的值。示例：export jxgc_kaituan="用户1&用户2"
+export jxgc_kaituan=""  ## 支持中文用户名
+## 4、推一推
+##    入口：极速版-赚金币 
+##    分享到QQ查看邀请码，packetId就是
+##    自定义变量
+export tytpacketId=""
+## 5、赚金币
+##    入口：极速版-百元生活费-赚金币-邀请好友
+##    第一次运行可不填写邀请码，运行一次查看自己的邀请码
+export InviterPin="" ##你的邀请码
+## 6、财富大陆热气球接客次数
+##    新增热气球接客 默认每次运行执行10次
+export gua_wealth_island_serviceNum="500"
+## 7、发财挖宝
+export fcwbroud=1
+## 8、发财大赢家助力
+##    需要设置环境变量dyjHelpPins来指定要助力的账号
+export dyjHelpPins=""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################################################################################################################################################################################
+
 ## Version: v2.8.0
 ## Date: 2022-01-12
 ## Mod: Build20210815-002
@@ -44,8 +305,6 @@ PipMirror="https://pypi.tuna.tsinghua.edu.cn/simple"
 
 
 ##################---------通知区---------###################----------------------------------------------------------------------------
-
-
 
 ## 通知环境变量
 ## 1. Server酱
@@ -235,7 +494,8 @@ esac
 #########################################################################################################################################################################
 ## 其他需要的变量，脚本中需要的变量使用 export 变量名= 声明即可
 
-########################################################################################################################################################################
+
+####################---------推送通知区---------##################################-----------------------------------------------------------------------
 # 脚本推送控制类环境变量
 ## 1、京东多合一签到脚本关闭运行结果推送，默认推送，填true表示不推送
 export JD_BEAN_SIGN_STOP_NOTIFY=""
@@ -268,378 +528,14 @@ export RAIN_NOTIFY_CONTROL="false"
 ## 15、修复点点券
 ##    新增显示有多少个非法请求 可以开通知 
 export DDQ_NOTIFY_CONTROL="" ##不填或false为通知，true为不通知
-
-
-# 定义每日签到的通知形式
-## js脚本每日签到提供3种通知方式，分别为：
-## 关闭通知，那么请在下方填入0
-## 简洁通知，那么请在下方填入1，其效果见：https://github.com/LXK9301/jd_scripts/blob/master/icon/bean_sign_simple.jpg
-## 原始通知，那么请在下方填入2，如果不填也默认为2，内容比较长，这也是默认通知方式
+## 16、定义每日签到的通知形式
+##    js脚本每日签到提供3种通知方式，分别为：
+##    关闭通知，那么请在下方填入0
+##    简洁通知，那么请在下方填入1，其效果见：https://github.com/LXK9301/jd_scripts/blob/master/icon/bean_sign_simple.jpg
+##    原始通知，那么请在下方填入2，如果不填也默认为2，内容比较长，这也是默认通知方式
 NotifyBeanSign=""
-
-# 定义每日签到每个接口间的延迟时间
-## 默认每个签到接口并发无延迟，如需要依次进行每个接口，请自定义延迟时间，单位为毫秒，延迟作用于每个签到接口, 如填入延迟则切换顺序签到(耗时较长)
+##    定义每日签到每个接口间的延迟时间
+##    默认每个签到接口并发无延迟，如需要依次进行每个接口，请自定义延迟时间，单位为毫秒，延迟作用于每个签到接口, 如填入延迟则切换顺序签到(耗时较长)
 export JD_BEAN_STOP=""
-
-
-
-
 ###########################################################################################################################################################################
-# 功能配置类环境变量
-
-
-## 2、推一推
-### 入口：极速版-赚金币 
-### 分享到QQ查看邀请码，packetId就是
-### 自定义变量
-export tytpacketId=""
-
-## 6、赚金币
-### 入口：极速版-百元生活费-赚金币-邀请好友
-### 第一次运行可不填写邀请码，运行一次查看自己的邀请码
-export InviterPin="" ##你的邀请码
-
-
-
-## 4、京喜工厂开团助力 for Python
-### 支持指定账号开团，跑1次脚本默认开3次团，如未指定账号默认给账号一开团。
-### 变量ENV 指定开团账号。可填用户名 或 pt_pin 的值。示例：export jxgc_kaituan="用户1&用户2"
-export jxgc_kaituan=""  ## 支持中文用户名
-## 5、入会开卡
-### int，入会送豆满足此值，否则不入会
-export openCardBean="30"
-### 布尔值，是否记录符合条件的shopid(默认True)
-export record="true"
-### 布尔值， True:仅记录，不入会(默认False)
-export onlyrecord="false"
-### 布尔值，开启记忆功能，接力上一次异常中断位置继续。(默认yes)
-export memory="false"
-### 布尔值，True：只打印部分日志 False:打印所有日志
-export printlog="true"
-### Float，限制速度，单位秒，如果请求过快报错适当调整0.5秒以上
-export sleepNum="0.5"
-### 布尔值，True:使用作者远程仓库更新的id，False：使用本地shopid.txt的id
-export isRemoteSid="true"
-
-
-
-## 6、财富大陆热气球接客次数
-### 新增热气球接客 默认每次运行执行10次
-export gua_wealth_island_serviceNum="500"
-
-
-
-
-## 5、发财大赢家助力
-### 需要设置环境变量dyjHelpPins来指定要助力的账号
-export dyjHelpPins=""
-
-## 1、京喜工厂开团
-### 默认第一个CK开团，例：若OPEN_DREAMFACTORY_TUAN="2,3"，则第2，第3个CK开团，其他账号参加第2，第3个CK开的团。每执行一次，会领取上一次成团的奖励和新开一次团，每天执行4次能开完3次团和领取3次团的奖励。一个账号能参团一次，一个账号一天能开三次团，请根据自己的情况设置需要开团的CK，一般至少5个CK能成团
-### 助力规则：开团账号开团，其他账号自动参团。 例：有A,B,C账号，A，B账号开团，则B，C会参加A的团，A会参加B的团。账号内互助之后，开团账号若有剩下参团次数，会尝试加入作者团
-### 成团条件：成团所需人数根据活动所需人数变化，一般为5-7人，若5人成团，则5个CK能成团一次，9个CK能成团两次，13个CK能成团三次
-export OPEN_DREAMFACTORY_TUAN=""
-
-
-## 2、新版京喜财富岛提现
-### 提现金额，可选0.1 0.5 1 2 10
-export CFD_CASHOUT_MONEY=10
-### token，顺序、数量必须与cookie一致。抓包地址：https://m.jingxi.com/jxbfd/user/ExchangePrize
-### export CFD_CASH_TOKEN='[{"strPgtimestamp":"你的值","strPhoneID":"你的值","strPgUUNum":"你的值"},{"strPgtimestamp":"你的值","strPhoneID":"你的值","strPgUUNum":"你的值"}]'
-export CFD_CASH_TOKEN='[{"strPgtimestamp":"","strPhoneID":"","strPgUUNum":""}]'
-
-
-
-
-################################################################################################################################################################################
-
-京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区 京东区
-
-################################################################################################################################################################################
-
-
-###   红包现金区
-
-## 1、愤怒的锦鲤
-##    助力账号，填写pt_pin或用户名的值。多个 pt_pin 值用 @ 连接如export kois="ck1"@"ck2"
-export kois=""
-## 2、早起赢现金
-##    入口：京东汽车-瓜分万元
-##    备注：支付一元才能参与活动，填写环境变量morningScPins给指定账号打卡
-export morningScPins="$(echo $JD_COOKIE | sed "s/&/\n/g; s/\S*pt_pin=\([^;]\+\);\S*/\1/g; s/\n/@/g;")"
-## 3、赚30元
-##    备注：赚30元每日签到红包、天降红包助力，在earn30Pins环境变量中填入需要签到和接受助力的账号。
-##    技巧：每月可以提现100元，但需要邀请一个新人下首单。可以用已注册手机号重新注册为新人账号，切换ip可以提高成功率。
-export earn30Pins=""
-## 4、全民运动会守卫红包
-##    助力码，需手动抓包
-export olympicgames_inviteId=""
-## 2、签到领现金兑换
-##    填写 pt_pin@金额，pt_pin为用户名，可以在 COOKIES 中提取；金额为 2 或 10，例如 LiLei@2 或 HanMeimei@10。多值用 & 连接，例如 LiLei@2&HanMeimei@10
-export exchangeAccounts=""     ##兑2元现金
-
-
-
-###   京豆兑换区
-
-## 1、京东健康社区京豆兑换
-export JD_HEALTH_REWARD_NAME="20" ##只能兑换京豆，填写纯数字20 10 5 3
-## 2、真·抢京豆
-##    高速并发抢京豆，专治偷助力。设置环境变量angryBeanPins为指定账号助力，默认不助力。
-##    环境变量angryBeanMode可选值priority或speed或smart，默认smart模式。
-##    默认推送通知，如要屏蔽通知需将环境变量enableAngryBeanNotify的值设为false。
-export angryBeanPins=""
-export angryBeanMode="priority"
-export enableAngryBeanNotify="true"
-## 3、组队瓜分京豆活动变量
-export jd_zdjr_activityId=""
-export jd_zdjr_activityUrl=""
-## 4、东东超市商品兑换
-##    填写商品名字，兼容模糊关键词
-export coinToBeans='京豆包'
-##    多账号并发，默认开启 True，关闭 False
-export blueCoin_Cc='True'
-##    轮次
-export startMaxNum="30"
-##    多线程并发，相当于每秒点击兑换次数...适当调整，手机会发烫
-export dd_thread="30"
-##    开始抢兑时间
-export starttime="23:59:59.00000000"
-##    结束时间
-export endtime="00:00:30.00000000"
-## 5、QQ星系牧场自动兑换20豆
-export Cowexchange="true"
-## 6、赚京豆
-##    助力账号，填写pt_pin或用户名的值，如 zlzh = ['aaaa','xxxx','yyyy'] ，支持ENV
-export zlzh=""
-## 7、全民抢京豆
-export qjd_zlzh=""
-## 8、宠汪汪积分兑换多少京豆。目前可填值为20或者500,脚本默认0,0表示不兑换京豆
-export JD_JOY_REWARD_NAME="500"
-## 9、东东超市兑换京豆数量。目前可输入值为20或者1000，或者其他商品的名称,例如碧浪洗衣凝珠
-export MARKET_COIN_TO_BEANS="超值京豆包"
-## 10、京东领现金红包兑换京豆开关。false为不换,true为换(花费2元红包兑换200京豆，一周可换四次)，默认为false
-export CASH_EXCHANGE="false"
-
-
-
-
-
-
-
-###   活动设置区
-
-## 1、京东试用jd_try相关环境变量
-##    控制每次获取商品数量，默认12
-export JD_TRY_PAGE_SIZE=""
-##    商品分类，以 @ 隔开，示例：家用电器@手机数码@电脑办公@家居家装
-export JD_TRY_CIDS_KEYS="家用电器@手机数码@电脑办公@家居家装"
-##    试用类型，以 @ 隔开，示例：免费试用@闪电试
-export JD_TRY_TYPE_KEYS=""
-##    过滤试用商品关键字，以 @ 隔开(默认内置了很多关键字，建议使用默认)
-export JD_TRY_GOOD_FILTERS=""
-##    试用商品最低价格
-export JD_TRY_MIN_PRICE="20"
-##    试用商品最多提供数量（过滤垃圾商品）
-export JD_TRY_MAX_SUPPLY_COUNT="3"
-## 2、京豆雨
-##    整点京豆雨RRA
-export SUPER_RAIN_RRA=""
-##    半点京豆雨RRA
-export HALF_RAIN_RRA=""
-## 3、京东领现金红包兑换京豆开关。false为不换,true为换(花费2元红包兑换200京豆，一周可换四次)，默认为false
-export CASH_EXCHANGE="false"
-## 4、宠汪汪喂食数量。可以填的数字0,10,20,40,80,其他数字不可
-export JOY_FEED_COUNT="80"
-## 5、宠汪汪帮好友喂食。默认 "false" 不会自动给好友的汪汪喂食，如想自动喂食，请修改为 "true"
-export JOY_HELP_FEED="true"
-## 6、宠汪汪是否赛跑(默认参加双人赛跑)。false为不跑,true为跑
-export JOY_RUN_FLAG="true"
-## 7、宠汪汪参加什么级别的赛跑。可选数字为2,10,50，
-##    当JOY_RUN_FLAG不设置或设置为 "true" 时生效
-##    可选值：2,10,50，其他值不可以。其中2代表参加双人PK赛，10代表参加10人突围赛，50代表参加50人挑战赛，不填时默认为2
-##    各个账号间请使用 & 分隔，比如：JOY_TEAM_LEVEL="2&2&50&10"
-##    如果您有5个账号但只写了四个数字，那么第5个账号将默认参加2人赛，账号如果更多，与此类似
-export JOY_TEAM_LEVEL="2&2&50&10"
-## 8、宠汪汪赛跑自己账号内部互助。输入true为开启内部互助
-export JOY_RUN_HELP_MYSELF="true"
-## 9、东东超市是否参加pk。true表示参加,false表示不参加
-export JOIN_PK_TEAM="true"
-## 10、东东超市是否用金币抽奖。true表示抽奖,false表示不抽奖
-export SUPERMARKET_LOTTERY="true"
-## 11、东东农场是否使用水滴换豆卡。true表示换,false表示不换
-export FRUIT_BEAN_CARD="true"
-## 12、是否取关商品。环境变量内容的意思依次是是否取关全部商品(0表示一个都不),是否取关全部店铺数(0表示一个都不),遇到此商品不再进行取关,遇到此店铺不再进行取关
-export UN_SUBSCRIBES="300,300,,"
-## 13、jd_unsubscribe这个任务是用来取关每天做任务关注的商品和店铺，默认在每次运行时取关20个商品和20个店铺
-##    如果取关数量不够，可以根据情况增加，还可以设置 jdUnsubscribeStopGoods 和 jdUnsubscribeStopShop 
-##    商品取关数量
-export goodPageSize="30"
-##    店铺取关数量
-export shopPageSize="60"
-##    遇到此商品不再取关此商品以及它后面的商品，需去商品详情页长按拷贝商品信息
-export jdUnsubscribeStopGoods=""
-##    遇到此店铺不再取关此店铺以及它后面的店铺，请从头开始输入店铺名称
-export jdUnsubscribeStopShop=""
-## 14、摇钱树是否卖出金果。true卖出，false不卖出，默认false
-export MONEY_TREE_SELL_FRUIT="true"
-## 15、东东工厂心仪商品。
-export FACTORAY_WANTPRODUCT_NAME=""
-## 16、东东工厂控制哪个京东账号不运行此脚本。多个使用&连接
-export JDFACTORY_FORBID_ACCOUNT=""
-## 17、京喜工厂控制哪个京东账号不运行此脚本。多个使用&连接
-export DREAMFACTORY_FORBID_ACCOUNT=""
-## 18、lxk0301脚本是否加购。如加设置true
-export PURCHASE_SHOPS="true"
-## 19、京喜工厂拼团瓜分电力活动的activeId（当前需抓包替换或去群里求别人分享）
-export TUAN_ACTIVEID=""
-## 20、京东UA。点点券脚本运行环境变量
-export JD_USER_AGENT=""
-## 21、宠汪汪二代目
-##    默认80，10、20、40、80可选
-export feedNum="80"
-##    默认双人跑
-export JD_JOY_teamLevel="2"
-##    宠汪汪等提示预存验证码数量不足
-export validate_num="10" ##你需要的数值
-## 22、京东签到图形验证修改火爆问题
-##    如果 read ECONNRESET 错误 可以试试
-##    环境变量 JOY_HOST 修改域名 https://jdjoy.jd.com 可以改成ip https://49.7.27.236
-##    如果上面ip不行就自己去ping下域名对应的ip cmd窗口输入—>ping jdjoy.jd.com 再改
-##    不要频繁请求 请过个半小时 1小时在执行
-export JOY_HOST=""
-## 23、图形验证文件 JDJRValidator_Pure.js 验证次数
-##    新增验证次数上限 默认25次 验证可能无法成功
-export JDJR_validator_Count="20"
-## 25、邀请有礼  
-##    自定义邀请码环境变量
-export yqm="" ##你的邀请码
-## 26、签到领现金添加变量方式
-##    自行添加变量设置邀请码 格式如下 默认10个
-export cashinviteCode=""
-export cashinviteCode2=""
-export cashinviteCode3=""
-##    签到领现金助力
-export cash_zlzh=""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#########_________以下为小呱呱手动添加，以下为小呱呱手动添加，以下为小呱呱手动添加_________#########-------------------------------------------------------------------------
-
-##开卡全部同意（all变量）
-export guaopencard_All="true"
-export guaopencard_addSku_All="true"
-export guaopencardRun_All="true"
-export guaopencard_draw="true"
-
-##清空购物车
-export gua_cleancart_Run="true"
-export gua_cleancart_products="*@&@所有账号清空"
-export gua_cleancart_SignUrl="https://jd.smiek.tk/jdcleancatr_21102717"
-
-##发财挖宝
-export fcwbroud=1
-
-##京东试用
-export JD_TRY="true"
-
-##爱企查
-export aqcCookies="cookie"@"cookie2"
-##爱妻查监控e卡
-export aqcGood="AQ03008"
-
-
-##今日头条小黄鸟搜索hostname = i.snssdk.com //安卓版  hostname = api3-normal-lq.toutiaoapi.com //IOS版
-export jrttjsbHeader="cookie"@"cookie2"
-##今日头条极速
-export jrttjsbHeader="cookie"@"cookie2"
-
-##快手极速版小黄鸟搜ug-fission.kuaishou.com
-export kshd="cookie"@"cookie2"
-
-##聚看点
-###聚看点
-export jkdhd='{"openid": "cookie"}'@'{"openid": "cookie2"}'
-export jkdck='{"Cookie":"xz_jkd_appkey=cookie"}'@'{"Cookie":"xz_jkd_appkey=cookie2"}'
-
-
 
